@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>TODO App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lista de Tareas</h1>
+
+  <ul id="task-list">
+    <li>
+      <input type="checkbox" onchange="toggleComplete(this)">
+      Comprar pan
+    </li>
+    <li>
+      <input type="checkbox" onchange="toggleComplete(this)">
+      Estudiar para el examen
+    </li>
+  </ul>
+
+  <script>
+    function toggleComplete(checkbox) {
+      const task = checkbox.parentElement;
+      task.classList.toggle("completed");
+    }
+  </script>
+</body>
+</html>
